@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>溪宝子，复活节快乐</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page active" id="page0" style="background-image: url('cover.png');">
+    <div class="text-box">
+      <h1>溪宝子，复活节快乐</h1>
+      <p>By 夏天</p>
+      <button class="btn" onclick="nextPage()">开始</button>
+    </div>
+  </div>
+
+  <div class="page" id="page1" style="background-image: url('egg_1.png');">
+    <div class="text-box">
+      <p>一颗彩蛋静静地躺在你面前。</p>
+      <button class="btn" onclick="alert('希望溪宝子复活节快乐，开开心心。'); nextPage()">点开看看</button>
+    </div>
+  </div>
+
+  <div class="page" id="page2" style="background-image: url('memory.png');">
+    <div class="text-box">
+      <button class="btn" onclick="nextPage()">这次时间太紧了，只能设计一个小游戏，以后每个节日我都会准备的。</button>
+    </div>
+  </div>
+
+  <div class="page" id="page3" style="background-image: url('eggs_multi.png');">
+    <div class="text-box">
+      <p>点一颗彩蛋看看它藏着什么任务 🥚</p>
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <button class="btn" onclick="drawTask(0)">彩蛋①</button>
+        <button class="btn" onclick="drawTask(1)">彩蛋②</button>
+        <button class="btn" onclick="drawTask(2)">彩蛋③</button>
+        <button class="btn" onclick="drawTask(3)">彩蛋④</button>
+        <button class="btn" onclick="drawTask(4)">彩蛋⑤</button>
+      </div>
+      <p id="task-result" style="margin-top: 2rem; font-weight: bold;"></p>
+      <button class="btn" onclick="nextPage()">继续</button>
+    </div>
+  </div>
+  
+
+  <div class="page" id="page4" style="background-color: #fffaf4;">
+    <div class="text-box">
+      <p id="task-result"></p>
+      <button class="btn" onclick="restart()">重新体验</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
